@@ -1,0 +1,31 @@
+import React from "react";
+
+
+const Nav = (props) => {
+  return (
+      <nav class="navbar navbar-expand-lg bg-dark bg-gradient font-link">
+    <img className="navbar-brand" src="https://img.icons8.com/external-flatart-icons-outline-flatarticons/64/000000/external-success-success-flatart-icons-outline-flatarticons.png" alt="Accompli Logo"/>
+    <div>
+      <ul className="nav">
+        <li className="nav-item">
+          <a className="nav-link text-light" href="#" onClick={props.toggleMemoModal}>
+            Add Memo
+          </a>
+        </li>
+        <li className="nav-item">
+          <a className="nav-link text-light" href="#">
+           Calendar View
+          </a>
+        </li>
+        <li className="nav-item">
+          <a className="nav-link text-light text-right" href="#" onClick={props.logout}>
+            Logout
+          </a>
+        </li>
+      </ul>
+    </div>
+    </nav>
+  );
+};
+
+export default Nav;
