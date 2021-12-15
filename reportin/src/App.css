@@ -76,6 +76,7 @@ p {
 #textbody {
 height:320px; 
 width:400px;
+margin: 20px
 }
 
 #title {
@@ -84,4 +85,9 @@ width:400px;
 
 #createdON {
   width:400px;
+  margin: 20px
 }
+#submit {
+  margin: 20px
+}
+

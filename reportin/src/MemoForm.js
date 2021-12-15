@@ -69,7 +69,7 @@ render () {
               <label htmlFor="name">Date: </label>
               <input type="date" id="createdOn" name="createdOn"/>
               <br/>
-              <input type="submit" value="Post" />
+              <input type="submit" id="submit" value="Post" />
           </form>
 
         </React.Fragment>
