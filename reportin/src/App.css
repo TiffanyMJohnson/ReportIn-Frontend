@@ -1,7 +1,26 @@
 
 header {
   background-color: darkred;
+  color: white;
 }
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 10vh;
+  list-style: none;
+  color: white;
+}
+
+/* .nav-Links {
+  width: 50%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 10vh;
+  list-style: none;
+} */
 
 footer {
   background-color: darkred;
@@ -9,14 +28,17 @@ footer {
 }
 
 body {
-  background-color: black;
-  color: white;
+
   text-align: center;
   
 }
 
 #landing {
   margin: 50px;
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 30px;
 }
 
 #logo {
@@ -58,4 +80,5 @@ p {
   text-align: right;
   margin-right: 10px;
 }
+
 

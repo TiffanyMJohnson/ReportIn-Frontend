@@ -82,33 +82,23 @@ class User extends Component {
             <div className="welcome-margin">
             <div className="container position-absolute">
             <h1 className="font-welcome">Welcome Members & Parents</h1>
-            <h5 className="font-welcome-text">Sign up or Login for team details</h5>
+            <h4 className="font-welcome-text">Sign up for access to Gunslingers Drill Team portal.</h4>
 
 
 
-            <div className="">
-            <button type="button" className="btn bg-dark text-light font-welcome-buttons" data-bs-toggle="modal" data-bs-target="#signUpModal">SIGN UP</button>
-            <button type="button" className="btn bg-light font-welcome-buttons" data-bs-toggle="modal" data-bs-target="#loginModal">LOGIN</button>
-            </div>
+        
 
             {/* Sign Up Modal */}
-            <div className="modal fade" id="signUpModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div className="modal fade" id="signUpModal" 
+            aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div className="modal-dialog">
               <div className="modal-content bg-light">
                 <form onSubmit={this.registerUser}>
                 <div className="modal-header">
-                  <h5 className="modal-title text-dark font-welcome-buttons" id="exampleModalLabel">Hello, please sign up for Accompli!</h5>
                   <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div className="modal-body row g-2 font-welcome-text">
-                <label htmlFor="email">Email Address: </label>
-                  <input
-                    type="text"
-                    id="email"
-                    name="email"
-                    onChange={(e) => this.handleChange(e)}
-                    value={this.state.email}
-                  />
+               
                   <br></br>
                   <label htmlFor="username">Username: </label>
                   <input
@@ -118,8 +108,17 @@ class User extends Component {
                     onChange={(e) => this.handleChange(e)}
                     value={this.state.username}
                   />
-                  <br></br>
-                  <label htmlFor="password">Password: </label>
+                  <br/>
+                  <label htmlFor="email">Email: </label>
+                  <input
+                    type="text"
+                    id="email"
+                    name="email"
+                    onChange={(e) => this.handleChange(e)}
+                    value={this.state.email}
+                  />
+                  <br/>
+                  <label htmlFor="password">Password:</label>
                   <input
                     type="password"
                     id="password"
@@ -128,18 +127,27 @@ class User extends Component {
                     value={this.state.password}
                   />
                   <br></br>
-                   <label htmlFor="confirmedPassword">Confirm Password: </label>
+                   <label htmlFor="role">Role: </label>
                   <input
-                    type="password"
-                    id="confirmedPassword"
-                    name="confirmedPassword"
+                    type="datalist"
+                    id="role"
+                    name="role"
                     onChange={(e) => this.handleChange(e)}
-                    value={this.state.confirmedPassword}
+                    value={this.state.role}
                   />
-
+                  <br/>
+                  {/* <h5>An access code will be given by Gunslingers Drill Team staff for access to the portal.</h5>
+                  <label htmlFor="role">Access Code: </label>
+                  <input
+                    type="text"
+                    id="access_code"
+                    name="access_ode"
+                    onChange={(e) => this.handleChange(e)}
+                    value={this.state.role}
+                  /> */}
+                  
                 </div>
                 <div className="modal-footer">
-                  <button type="button" className="btn btn-secondary font-signup-buttons" data-bs-dismiss="modal">Close</button>
                   <input type="submit" className="btn btn-dark text-light font-signup-buttons" data-bs-dismiss="modal" value="Sign Up" />
                 </div>
                 </form>
@@ -161,7 +169,7 @@ class User extends Component {
               <div className="modal-content">
                 <form onSubmit={this.props.loginUser}>
                 <div className="modal-header">
-                  <h5 className="modal-title font-welcome-buttons" id="exampleModalLabel">Welcome back, Please log in!</h5>
+                  <h4 className="modal-title font-welcome-buttons" id="exampleModalLabel">Welcome back, Please log in!</h4>
                   <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div className="modal-body row g-2 font-welcome-text">
@@ -182,7 +190,6 @@ class User extends Component {
                   />
                 </div>
                 <div className="modal-footer">
-                  <button type="button" className="btn btn-secondary font-signup-buttons" data-bs-dismiss="modal">Close</button>
                   <input type="submit" className="btn btn-dark text-light font-signup-buttons" data-bs-dismiss="modal" value="Login" />
                 </div>
               </form>
