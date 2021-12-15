@@ -1,8 +1,5 @@
 
-header {
-  background-color: darkred;
-  color: white;
-}
+
 
 nav {
   display: flex;
@@ -11,16 +8,11 @@ nav {
   min-height: 10vh;
   list-style: none;
   color: white;
+  background-color: darkred;
+  padding-bottom: 15px;
 }
 
-/* .nav-Links {
-  width: 50%;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  min-height: 10vh;
-  list-style: none;
-} */
+
 
 footer {
   background-color: darkred;
@@ -41,11 +33,11 @@ body {
   padding: 30px;
 }
 
-#logo {
+
+.logo {
   max-width: 400px;
   margin-top: 20px;
   border: solid black
-
 }
 
 #about {
