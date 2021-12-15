@@ -73,4 +73,15 @@ p {
   margin-right: 10px;
 }
 
+#textbody {
+height:320px; 
+width:400px;
+}
 
+#title {
+  width:399px;
+}
+
+#createdON {
+  width:400px;
+}

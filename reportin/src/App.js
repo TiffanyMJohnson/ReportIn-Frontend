@@ -7,6 +7,7 @@ import MemoList from './MemoList'
 import Home from './Home'
 import Nav from './Nav'
 import Calendar from './Calender'
+import MemoForm from './MemoForm';
 
 
 
@@ -24,8 +25,9 @@ function App () {
               <Route path='/' exact element={<Home/>} />
               <Route path='/memolist' element={<MemoList />}/>
               <Route path='/calendar' element={<Calendar />}/>
+              <Route path='/memoform' element={<MemoForm />}/>
            </Routes>  
-           
+
           <footer>
             <div>
               <h3>CONTACT INFORMATION</h3>
