@@ -25,7 +25,7 @@ function App () {
 
             <Routes>
               <Route path='/' exact element={<Home/>} />
-              <Route path='/memolist' element={<MemoList />}/>
+              <Route path='/memos' element={<MemoList />}/>
               <Route path='/calendar' element={<CalendarApp />}/>
               <Route path='/memoform' element={<MemoForm />}/>
            </Routes>  

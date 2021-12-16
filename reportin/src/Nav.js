@@ -13,7 +13,7 @@ function Nav () {
 
        <Link to='/'> <img className="logo" src="https://i.imgur.com/Fv46bqj.jpg" alt="Home" /></Link> 
 
-        <li><Link  style={navStyle} to='/memolist'> Memos</Link></li>
+        <li><Link  style={navStyle} to='/memos'> Memos</Link></li>
         <li><Link style={navStyle} to='/calendar'> Calendar</Link></li>
       
           

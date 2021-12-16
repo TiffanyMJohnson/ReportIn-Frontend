@@ -1,10 +1,26 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import './App.css'
+import 'bootstrap/dist/css/bootstrap.css'
 import {Link} from 'react-router-dom'
 import MemoForm from "./MemoForm";
 
 
 function MemoList () {
+    const [memos, setMemos] = useState([
+        {
+        title: "",
+        body: "",
+        createdOn: ""
+        }
+    ])
+
+    useEffect(() => {
+        fetch("/memolist").then (res => {
+            if(res.ok) {
+                return res.json
+            }
+        }).then(jsonRes => setMemos(jsonRes))
+    })
 
 
 
@@ -13,9 +29,21 @@ function MemoList () {
         <div>
             <h1>Memos</h1>
 
-            <Link to ='/memoform'>
+             {memos.map(memo => (
+           
+                <div>
+                    <li>{memos}</li>
+                </div>
+                 
+             )
+             )}
+             
+
+            <Link to ='/memoform'  >
             <button>Create Memo</button>
             </Link>
+
+           
 
         </div>
     )

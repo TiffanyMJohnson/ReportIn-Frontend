@@ -1,80 +1,63 @@
-import React, {Component} from "react";
+import React, {useState} from "react";
 import './App.css'
+import axios from "axios"
+import {Redirect} from "react-router-dom"
 
 
-export default class MemoForm extends Component {
-    constructor (props) {
-        super(props)
+export default function MemoForm () {
 
-        this.state = {
-            title: "",
-            createdOn: "",
-            body: "",
-        }
-    }
+    const [input, setInput] = useState({
+        title: "",
+        body: "",
+        createdOn: ""
+    })
 
-    onSubmit = async (e) => {
-      e.preventDefault()
-      await this.setState({
-        title: e.target.title.value,
-        createdOn: e.target.createdOn.value,
-        body: e.target.body.value
-      }) 
-       this.post(e)
-       console.log('state at line 25', this.state)
-    }
-
-    post = async (e) => {
-      console.log('state at line 29', this.state)
-        const url = process.env.REACT_APP_BASE_URL+'/memoform'
-        console.log(url)
-        try {
-          console.log("this is after try")
-          const response = await fetch(url, {
-            method: 'POST',
-            body: JSON.stringify({
-              title: e.target.title.value,
-              createdOn: e.target.createdOn.value,
-              body: e.target.body.value,
-            }),
-            headers: {
-              'Content-Type': 'application/json'
+    function handleChange(event) {
+        const {name, value} = event.target
+        
+        setInput(prevInput => {
+            return {
+                ...prevInput,
+                [name]: value
             }
-          })
-          console.log("line 36")
-          if (response.status === 201) {
-            console.log("this is my response on 37", response)
-            this.setState({ redirect: "/login"})
-          }
+        })
+    }
+    
+    function handleClick(event) {
+        event.preventDefault()
+        const newMemo = {
+            title: input.title ,
+            body: input.body,
+            createdOn: input.createdOn
         }
-        catch (err) {
-          console.log('Error => ', err);
-        }
-       
-      }
+        
+        axios.post('http://localhost:3003/memoform', newMemo)
+        console.log(newMemo)
+    }
 
-render () {
-      return (
+    return (
+      
         <React.Fragment>
+        
 
          <h1 className="mt-4">Create Memo</h1>
 
-          <form onSubmit={this.onSubmit} className="mt-2">
+          <form className="mt-2">
               <label htmlFor="name">Title: </label> 
-              <input type="text" id="title" name="title"/>
+              <input onChange={handleChange} type="text" id="title" name="title" value={input.title}/>
               <br/>
               <label htmlFor="name">Body: </label>
-              <input type="textarea" id="textbody" name="body" rows="10" cols="30" />
+              <input onChange={handleChange} type="textarea" id="textbody" name="body" value={input.body} rows="10" cols="30" />
               <br/>
               <label htmlFor="name">Date: </label>
-              <input type="date" id="createdOn" name="createdOn"/>
+              <input onChange={handleChange} type="date" id="createdOn" name="createdOn" value={input.createdOn}/>
               <br/>
-              <input type="submit" id="submit" value="Post" />
+              <button onClick={handleClick} className="btn btn-lg">Post</button>
           </form>
 
         </React.Fragment>
-        )
+      )
+     
     }
-}
 
 
