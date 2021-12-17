@@ -5,37 +5,37 @@ import {Link} from 'react-router-dom'
 import MemoForm from "./MemoForm";
 
 
+
 function MemoList () {
-    const [memos, setMemos] = useState([
-        {
+    const [memos, setMemos] = useState([{
         title: "",
         body: "",
         createdOn: ""
-        }
-    ])
+}])
 
-    useEffect(() => {
-        fetch("/memolist").then (res => {
+
+
+    useEffect( () => {
+        fetch("/memoslist").then (res => {
             if(res.ok) {
-                return res.json
+                return res.json()
             }
         }).then(jsonRes => setMemos(jsonRes))
     })
 
-
+    
 
 
     return (
         <div>
             <h1>Memos</h1>
 
-             {memos.map(memo => (
-           
-                <div>
-                    <li>{memos}</li>
+             {memos.map(memo => 
+                <div className="memolist">
+                    <h3>{memo.title}</h3>
+                    <p>{memo.body}</p>
                 </div>
-                 
-             )
+             
              )}
              
 

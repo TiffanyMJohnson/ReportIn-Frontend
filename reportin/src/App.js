@@ -13,7 +13,6 @@ import MemoForm from './MemoForm';
 
 
 
-// let baseUrl = process.env.REACT_APP_BASEURL
 
 function App () {
     return (
@@ -25,7 +24,7 @@ function App () {
 
             <Routes>
               <Route path='/' exact element={<Home/>} />
-              <Route path='/memos' element={<MemoList />}/>
+              <Route path='/memoslist' element={<MemoList />}/>
               <Route path='/calendar' element={<CalendarApp />}/>
               <Route path='/memoform' element={<MemoForm />}/>
            </Routes>  

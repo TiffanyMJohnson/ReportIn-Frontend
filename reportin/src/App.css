@@ -91,3 +91,7 @@ margin: 20px
   margin: 20px
 }
 
+.memolist {
+  color: black;
+  list-style: none;
+}
