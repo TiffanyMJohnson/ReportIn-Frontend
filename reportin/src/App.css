@@ -10,6 +10,8 @@ nav {
   color: white;
   background-color: darkred;
   padding-bottom: 15px;
+  font-size: 25px;
+  text-decoration: underline;
 }
 
 
@@ -92,6 +94,51 @@ margin: 20px
 }
 
 .memolist {
-  color: black;
-  list-style: none;
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  margin-left: 20%;
+  margin-top: 10px;
+  border: solid black;
+  text-align: center;
+  color: white;
+  background-color: black;
+  
+}
+
+/* .btn {
+  background-color: darkred;
+} */
+
+#memotitle {
+  text-decoration: underline;
+}
+
+button {
+  background-color: darkred;
+  color: white;
+  height: 30px;
+  text-align: center;
+  
+  
+
+}
+
+/* .main {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  margin: 30% auto;
+  left: 30%;
+ 
+} */
+
+input {
+  height: 50px;
+  margin: 20px
+
+}
+
+h4 {
+  text-decoration: underline;
 }

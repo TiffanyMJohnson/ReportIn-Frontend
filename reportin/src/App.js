@@ -3,12 +3,10 @@ import React from 'react'
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
 
 
-
-import MemoList from './MemoList'
-import Home from './Home'
 import Nav from './Nav'
 import CalendarApp from './Calender'
-import MemoForm from './MemoForm';
+import Memos from './Memos'
+import Home from './Home'
 
 
 
@@ -23,10 +21,9 @@ function App () {
             <Nav/>
 
             <Routes>
-              <Route path='/' exact element={<Home/>} />
-              <Route path='/memoslist' element={<MemoList />}/>
+              <Route path='/' element={<Home/>}/>
               <Route path='/calendar' element={<CalendarApp />}/>
-              <Route path='/memoform' element={<MemoForm />}/>
+              <Route path='/memos' element={<Memos/>}/>
            </Routes>  
 
           <footer>

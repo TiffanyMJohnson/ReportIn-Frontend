@@ -33,11 +33,19 @@ export default function MemoForm () {
         
         axios.post('http://localhost:3003/memoform', newMemo)
         console.log(newMemo)
+
+        alert('memo posted')
+
+        setInput ({
+            title: "",
+            body: "",
+            createdOn: ""
+        })
     }
 
     return (
       
-        <React.Fragment>
+        <div className="createform">
         
 
          <h1 className="mt-4">Create Memo</h1>
@@ -55,7 +63,7 @@ export default function MemoForm () {
               <button onClick={handleClick} className="btn btn-lg">Post</button>
           </form>
 
-        </React.Fragment>
+          </div>
       )
      
     }
