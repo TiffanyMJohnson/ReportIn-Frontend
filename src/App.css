@@ -1,0 +1,131 @@
+
+
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 10vh;
+  list-style: none;
+  color: white;
+  background-color: darkred;
+  padding-bottom: 15px;
+  font-size: 25px;
+  text-decoration: underline;
+}
+
+
+
+footer {
+  background-color: darkred;
+  color:white;
+}
+
+body {
+
+  text-align: center;
+  
+}
+
+#landing {
+  margin: 50px;
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 30px;
+}
+
+
+.logo {
+  max-width: 400px;
+  margin-top: 20px;
+  border: solid black
+}
+
+#about {
+  flex: auto;
+ float: right;
+ flex-wrap: wrap;
+ max-width: 600px;
+ max-height: 600px;
+ font-size: 30px;
+ padding: 10px;
+
+}
+
+button {
+  margin-bottom: 10px;
+  margin-top: 10px
+}
+
+
+#teamphoto {
+  max-width: 600px;
+  max-height: 600px;
+  border: solid white;
+  float: inline-start;
+}
+
+p {
+  float: inline-end;
+}
+
+#appname {
+  text-align: right;
+  margin-right: 10px;
+}
+
+#textbody {
+height:320px; 
+width:400px;
+margin: 20px
+}
+
+#title {
+  width:399px;
+}
+
+#createdON {
+  width:400px;
+  margin: 20px
+}
+#submit {
+  margin: 20px
+}
+
+.memolist {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  margin-left: 20%;
+  margin-top: 10px;
+  border: solid black;
+  text-align: center;
+  color: white;
+  background-color: black;
+  
+}
+
+
+#memotitle {
+  text-decoration: underline;
+}
+
+button {
+  background-color: darkred;
+  color: white;
+  height: 30px;
+  text-align: center;
+
+}
+
+
+input {
+  height: 50px;
+  margin: 20px
+
+}
+
+h4 {
+  text-decoration: underline;
+}
